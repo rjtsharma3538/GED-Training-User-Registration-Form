@@ -18,14 +18,14 @@ public class mobile {
 
     private boolean check(String name1)
     {
-        String name = "^[+][1-9][0-9]*[\\s][0-9]{10}";
+        String name = "^[+][1-9][0-9]*[\\s][0-9]{10}$";
         Pattern pattern = Pattern.compile(name);
         Matcher matcher = pattern.matcher(name1);
 
         if(matcher.matches())
             return true;
         
-        String name2 = "^[+][1-9][0-9]*-[0-9]+[\\s][0-9]{10}";
+        String name2 = "^[+][1-9][0-9]*-[0-9]+[\\s][0-9]{10}$";
         pattern =  Pattern.compile(name2);
         matcher = pattern.matcher(name1);
 

@@ -7,12 +7,14 @@ public class userRegistration {
     String last_name;
     String email_address;
     String number;
+    String password;
 
     userRegistration() {
         this.first_name = "";
         this.last_name = "";
         this.email_address = "";
         this.number = "";
+        this.password = "";
     }
 
     void add_first_name() {
@@ -80,5 +82,22 @@ public class userRegistration {
 
         System.out.println("mobile number saved successfully");
         this.number = name;
+    }
+
+    void add_password()
+    {
+        System.out.println("Enter your password : ");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        password pass = new password(name);
+
+        while(pass.is_valid()==false)
+        {
+            name = scanner.nextLine();
+            pass = new password(name);
+        }
+
+        System.out.println("mobile number saved successfully");
+        this.password = name;
     }
 }

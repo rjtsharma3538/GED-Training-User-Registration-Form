@@ -21,7 +21,7 @@ public class lastName {
 
     private boolean check(String name1) {
 
-        String name = "[A-Z][A-Za-z]{2,}$";
+        String name = "^[A-Z][A-Za-z]{2,}$";
         Pattern pattern = Pattern.compile(name);
         Matcher matcher = pattern.matcher(name1);
 
