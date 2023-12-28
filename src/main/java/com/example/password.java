@@ -6,35 +6,40 @@ import java.util.regex.Pattern;
 public class password {
     private String pass;
 
-    password(String pass)
-    {
+    password(String pass) {
         this.pass = pass;
     }
 
-    public boolean is_valid()
-    {
+    public boolean is_valid() {
         return check(this.pass);
     }
 
-    public String get_password()
-    {
+    public String get_password() {
         return this.pass;
     }
 
-    private boolean check(String name)
-    {
+    private boolean check(String name) {
         // TC - 1 8 characters
-        //String name1 = "[A-Za-z0-9!@#%^&*()_+-=[]{}|;':\\\",./<>?~`]{8}";
+        // String name1 = "[A-Za-z0-9!@#%^&*()_+-=[]{}|;':\\\",./<>?~`]{8}";
         String name1 = "^.{8,}$";
         Pattern pattern = Pattern.compile(name1);
         Matcher matcher = pattern.matcher(name);
 
-        if(!matcher.matches())
-        {
+        if (!matcher.matches()) {
             System.out.println("password length must be greater than 8");
             return false;
         }
 
+        // TC - 2 one uppercase
+
+        String name2 = "^.*[A-Z].*$";
+        pattern = Pattern.compile(name2);
+        matcher = pattern.matcher(name);
+
+        if (!matcher.matches()) {
+            System.out.println("password must contain atlest one uppercase character");
+            return false;
+        }
 
         return true;
     }
