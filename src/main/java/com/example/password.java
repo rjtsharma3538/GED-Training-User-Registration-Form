@@ -41,6 +41,18 @@ public class password {
             return false;
         }
 
+        // Tc -3 one numeric
+
+        String name3 = "^.*[0-9].*$";
+        pattern = Pattern.compile(name3);
+        matcher = pattern.matcher(name);
+
+        if(!matcher.matches())
+        {
+            System.out.println("password must contain atleast one numeric character");
+            return false;
+        }
+
         return true;
     }
 }
