@@ -53,6 +53,18 @@ public class password {
             return false;
         }
 
+        // Tc -4 only one special character
+
+        String name4 = "^[a-zA-Z0-9]*[^a-zA-Z0-9\\s][a-zA-Z0-9]*$";
+        pattern = Pattern.compile(name4);
+        matcher = pattern.matcher(name);
+
+        if(!matcher.matches())
+        {
+            System.out.println("password must contain exactly one special character");
+            return false;
+        }
+
         return true;
     }
 }
