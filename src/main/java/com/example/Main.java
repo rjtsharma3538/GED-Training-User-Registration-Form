@@ -9,6 +9,7 @@ public class Main {
         System.out.println();
         System.out.println("these are the form details : ");
         System.out.println();
+        
         form.display();
     }
 }
