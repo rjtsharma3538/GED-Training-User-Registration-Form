@@ -63,4 +63,22 @@ public class userRegistration {
         System.out.println("email saved successfully");
         this.email_address = name;
     }
+
+    void add_mobile()
+    {
+        System.out.println("Enter your mobile number : ");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        mobile mob = new mobile(name);
+
+        while(mob.is_valid()==false)
+        {
+            System.out.println("Entered mobile number is wrong pls enter mobile number again");
+            name = scanner.nextLine();
+            mob = new mobile(name);
+        }
+
+        System.out.println("mobile number saved successfully");
+        this.number = name;
+    }
 }
