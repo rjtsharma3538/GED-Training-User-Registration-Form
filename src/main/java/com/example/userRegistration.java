@@ -46,4 +46,21 @@ public class userRegistration {
         this.last_name=name;
     }
 
+
+    void add_email(){
+        System.out.println("Enter email Address");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        email e = new email(name);
+
+        while(e.is_valid()==false)
+        {
+            System.out.println("Entered email address is not valid pls enter the email again");
+            name = scanner.nextLine();
+            e = new email(name);
+        }
+
+        System.out.println("email saved successfully");
+        this.email_address = name;
+    }
 }
