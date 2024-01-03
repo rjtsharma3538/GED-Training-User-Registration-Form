@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 public class mobile {
     String mobileNumber;
 
-    mobile(String mobileNumber)
+    public mobile(String mobileNumber)
     {
         this.mobileNumber=mobileNumber;
     }

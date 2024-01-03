@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 public class email {
     private String email_name;
 
-    email(String email_name) {
+    public email(String email_name) {
         this.email_name = email_name;
     }
 

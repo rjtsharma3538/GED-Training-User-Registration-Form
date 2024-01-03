@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class password {
     private String pass;
 
-    password(String pass) {
+    public password(String pass) {
         this.pass = pass;
     }
 
