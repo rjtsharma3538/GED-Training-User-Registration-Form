@@ -13,13 +13,14 @@ public class firstName {
 
     }
 
-    public boolean is_valid() {
+    public boolean is_valid() throws InvalidDataException {
 
-        return check(this.first_name);
-
+        if(check(this.first_name))
+            return true;
+        throw new InvalidDataException("First letter must be capital and must be of three words");
     }
 
-    private boolean check(String name1) {
+    private boolean check(String name1){
 
         String name = "[A-Z][A-Za-z]{2,}$";
         Pattern pattern = Pattern.compile(name);
@@ -28,6 +29,5 @@ public class firstName {
         if (matcher.matches())
             return true;
         return false;
-
     }
 }
